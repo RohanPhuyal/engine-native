@@ -76,6 +76,11 @@
 #include "cocos/scripting/js-bindings/manual/jsb_spine_manual.hpp"
 #endif
 
+#if USE_SPINE4
+#include "cocos/scripting/js-bindings/auto/jsb_cocos2dx_spine4_auto.hpp"
+#include "cocos/scripting/js-bindings/manual/jsb_spine4_manual.hpp"
+#endif
+
 #if USE_DRAGONBONES
 #include "cocos/scripting/js-bindings/auto/jsb_cocos2dx_dragonbones_auto.hpp"
 #include "cocos/scripting/js-bindings/manual/jsb_dragonbones_manual.hpp"
@@ -161,6 +166,11 @@ bool jsb_register_all_modules()
 #if USE_SPINE
     se->addRegisterCallback(register_all_cocos2dx_spine);
     se->addRegisterCallback(register_all_spine_manual);
+#endif
+
+#if USE_SPINE4
+    se->addRegisterCallback(register_all_cocos2dx_spine4);
+    se->addRegisterCallback(register_all_spine4_manual);
 #endif
 
 #if USE_DRAGONBONES

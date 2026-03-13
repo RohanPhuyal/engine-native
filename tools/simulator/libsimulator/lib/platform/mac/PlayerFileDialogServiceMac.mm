@@ -27,6 +27,7 @@
 #include "PlayerFileDialogServiceMac.h"
 
 #include "glfw3.h"
+#define GLFW_EXPOSE_NATIVE_NSGL
 #include "glfw3native.h"
 
 #define VALIDATE_FRAMEBUFFER { \

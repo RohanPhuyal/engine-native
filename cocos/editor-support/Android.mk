@@ -101,6 +101,14 @@ spine-creator-support/AttachUtil.cpp \
 ../scripting/js-bindings/auto/jsb_cocos2dx_spine_auto.cpp
 endif # USE_SPINE
 
+ifeq ($(USE_SPINE4),1)
+LOCAL_SRC_FILES += \
+$(wildcard spine4/*.cpp) \
+$(wildcard spine4-creator-support/*.cpp) \
+../scripting/js-bindings/manual/jsb_spine4_manual.cpp \
+../scripting/js-bindings/auto/jsb_cocos2dx_spine4_auto.cpp
+endif # USE_SPINE4
+
 ifeq ($(USE_DRAGONBONES),1)
 LOCAL_SRC_FILES += \
 dragonbones/animation/Animation.cpp \

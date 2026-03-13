@@ -1,0 +1,1064 @@
+#pragma once
+#include "base/ccConfig.h"
+#if USE_SPINE4 > 0
+
+#include "cocos/scripting/js-bindings/jswrapper/SeApi.h"
+
+extern se::Object* __jsb_spine4_Animation_proto;
+extern se::Class* __jsb_spine4_Animation_class;
+
+bool js_register_spine4_Animation(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_getTimelines);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_hasTimeline);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_getDuration);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_setDuration);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Animation_search);
+
+extern se::Object* __jsb_spine4_Color_proto;
+extern se::Class* __jsb_spine4_Color_class;
+
+bool js_register_spine4_Color(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Color_clamp);
+
+extern se::Object* __jsb_spine4_Slot_proto;
+extern se::Class* __jsb_spine4_Slot_class;
+
+bool js_register_spine4_Slot(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getDarkColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_setSequenceIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getSequenceIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_hasDarkColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getDeform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_setAttachmentState);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getSkeleton);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Slot_getAttachmentState);
+
+extern se::Object* __jsb_spine4_TrackEntry_proto;
+extern se::Class* __jsb_spine4_TrackEntry_class;
+
+bool js_register_spine4_TrackEntry(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getNext);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getTrackComplete);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixDuration);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setAnimationEnd);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setEventThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getShortestRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setTrackEnd);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setAlphaAttachmentThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixBlend);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getTrackEnd);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setDelay);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAnimationEnd);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setMixTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_wasApplied);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_isComplete);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setMixDrawOrderThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setShortestRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getReverse);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixDrawOrderThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setAlpha);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixingTo);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setTrackTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setMixDuration);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_resetRotationDirections);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setMixAttachmentThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixAttachmentThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setReverse);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setHoldPrevious);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getLoop);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getTrackTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAnimationStart);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAnimationLast);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setAnimationStart);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setLoop);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getTrackIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getPrevious);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getDelay);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getHoldPrevious);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getMixingFrom);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_isNextReady);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAnimationTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getEventThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setAnimationLast);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAlpha);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_getAlphaAttachmentThreshold);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TrackEntry_setMixBlend);
+
+extern se::Object* __jsb_spine4_AnimationState_proto;
+extern se::Class* __jsb_spine4_AnimationState_class;
+
+bool js_register_spine4_AnimationState(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_addAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_setManualTrackEntryDisposal);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_setEmptyAnimations);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_getCurrent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_enableQueue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_clearTracks);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_disposeTrackEntry);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_disableQueue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_setEmptyAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_setTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_getManualTrackEntryDisposal);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_getTracks);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_clearTrack);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_setAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_addEmptyAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationState_getTimeScale);
+
+extern se::Object* __jsb_spine4_AnimationStateData_proto;
+extern se::Class* __jsb_spine4_AnimationStateData_class;
+
+bool js_register_spine4_AnimationStateData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_getMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_getDefaultMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_getSkeletonData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_clear);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_setDefaultMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AnimationStateData_setMix);
+
+extern se::Object* __jsb_spine4_Attachment_proto;
+extern se::Class* __jsb_spine4_Attachment_class;
+
+bool js_register_spine4_Attachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Attachment_getRefCount);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Attachment_reference);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Attachment_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Attachment_dereference);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Attachment_copy);
+
+extern se::Object* __jsb_spine4_Timeline_proto;
+extern se::Class* __jsb_spine4_Timeline_class;
+
+bool js_register_spine4_Timeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Timeline_getPropertyIds);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Timeline_getFrameCount);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Timeline_getFrames);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Timeline_getDuration);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Timeline_getFrameEntries);
+
+extern se::Object* __jsb_spine4_AttachmentTimeline_proto;
+extern se::Class* __jsb_spine4_AttachmentTimeline_class;
+
+bool js_register_spine4_AttachmentTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AttachmentTimeline_getAttachmentNames);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AttachmentTimeline_setSlotIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AttachmentTimeline_setFrame);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AttachmentTimeline_getSlotIndex);
+
+extern se::Object* __jsb_spine4_Bone_proto;
+extern se::Class* __jsb_spine4_Bone_class;
+
+bool js_register_spine4_Bone(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setD);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setInherit);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAppliedRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getC);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getD);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getChildren);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setWorldX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_parentToWorld);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_updateAppliedTransform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldRotationY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getInherit);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldToLocalRotationX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldToLocalRotationY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getA);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setA);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_worldToParent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldRotationX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setC);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setWorldY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setAY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_isActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_rotateWorld);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getParent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getAppliedRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_updateWorldTransform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getWorldX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_getSkeleton);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_isYDown);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Bone_setYDown);
+
+extern se::Object* __jsb_spine4_BoneData_proto;
+extern se::Class* __jsb_spine4_BoneData_class;
+
+bool js_register_spine4_BoneData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setInherit);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_isSkinRequired);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getLength);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setLength);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setIcon);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getInherit);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getShearX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setSkinRequired);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getParent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_getIcon);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_isVisible);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoneData_setVisible);
+
+extern se::Object* __jsb_spine4_VertexAttachment_proto;
+extern se::Class* __jsb_spine4_VertexAttachment_class;
+
+bool js_register_spine4_VertexAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_getVertices);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_getTimelineAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_getId);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_setTimelineAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_copyTo);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_getWorldVerticesLength);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexAttachment_setWorldVerticesLength);
+
+extern se::Object* __jsb_spine4_BoundingBoxAttachment_proto;
+extern se::Class* __jsb_spine4_BoundingBoxAttachment_class;
+
+bool js_register_spine4_BoundingBoxAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoundingBoxAttachment_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_BoundingBoxAttachment_copy);
+
+extern se::Object* __jsb_spine4_ClippingAttachment_proto;
+extern se::Class* __jsb_spine4_ClippingAttachment_class;
+
+bool js_register_spine4_ClippingAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ClippingAttachment_setEndSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ClippingAttachment_copy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ClippingAttachment_getEndSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ClippingAttachment_getColor);
+
+extern se::Object* __jsb_spine4_CurveTimeline_proto;
+extern se::Class* __jsb_spine4_CurveTimeline_class;
+
+bool js_register_spine4_CurveTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CurveTimeline_setBezier);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CurveTimeline_setLinear);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CurveTimeline_setStepped);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CurveTimeline_getCurves);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CurveTimeline_getBezierValue);
+
+extern se::Object* __jsb_spine4_ConstraintData_proto;
+extern se::Class* __jsb_spine4_ConstraintData_class;
+
+bool js_register_spine4_ConstraintData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_setSkinRequired);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_setOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_getOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_getRTTI);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ConstraintData_isSkinRequired);
+
+extern se::Object* __jsb_spine4_DeformTimeline_proto;
+extern se::Class* __jsb_spine4_DeformTimeline_class;
+
+bool js_register_spine4_DeformTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_setBezier);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_setSlotIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_getSlotIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_DeformTimeline_getCurvePercent);
+
+extern se::Object* __jsb_spine4_DrawOrderTimeline_proto;
+extern se::Class* __jsb_spine4_DrawOrderTimeline_class;
+
+bool js_register_spine4_DrawOrderTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+
+extern se::Object* __jsb_spine4_Event_proto;
+extern se::Class* __jsb_spine4_Event_class;
+
+bool js_register_spine4_Event(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getFloatValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getIntValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getStringValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getBalance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_setFloatValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_setIntValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getVolume);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_setBalance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_setStringValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Event_setVolume);
+
+extern se::Object* __jsb_spine4_EventData_proto;
+extern se::Class* __jsb_spine4_EventData_class;
+
+bool js_register_spine4_EventData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getAudioPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getIntValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getStringValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getFloatValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setFloatValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setIntValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getVolume);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setBalance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setVolume);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setStringValue);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_getBalance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventData_setAudioPath);
+
+extern se::Object* __jsb_spine4_EventTimeline_proto;
+extern se::Class* __jsb_spine4_EventTimeline_class;
+
+bool js_register_spine4_EventTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventTimeline_getEvents);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_EventTimeline_setFrame);
+
+extern se::Object* __jsb_spine4_IkConstraint_proto;
+extern se::Class* __jsb_spine4_IkConstraint_class;
+
+bool js_register_spine4_IkConstraint(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getCompress);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setStretch);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setBendDirection);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setCompress);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getBendDirection);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getSoftness);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getStretch);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_setSoftness);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraint_isActive);
+
+extern se::Object* __jsb_spine4_IkConstraintData_proto;
+extern se::Class* __jsb_spine4_IkConstraintData_class;
+
+bool js_register_spine4_IkConstraintData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setUniform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setStretch);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getUniform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setCompress);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getBendDirection);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setBendDirection);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getSoftness);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getStretch);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getRTTI);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_getCompress);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintData_setSoftness);
+
+extern se::Object* __jsb_spine4_IkConstraintTimeline_proto;
+extern se::Class* __jsb_spine4_IkConstraintTimeline_class;
+
+bool js_register_spine4_IkConstraintTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintTimeline_setIkConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintTimeline_getIkConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_IkConstraintTimeline_setFrame);
+
+extern se::Object* __jsb_spine4_MeshAttachment_proto;
+extern se::Class* __jsb_spine4_MeshAttachment_class;
+
+bool js_register_spine4_MeshAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getSequence);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_computeWorldVertices);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setParentMesh);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getUVs);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getEdges);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_updateRegion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setHullLength);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setRegion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setSequence);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_copy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_setHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_newLinkedMesh);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getRegionUVs);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getRegion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getHullLength);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getTriangles);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_MeshAttachment_getParentMesh);
+
+extern se::Object* __jsb_spine4_PathAttachment_proto;
+extern se::Class* __jsb_spine4_PathAttachment_class;
+
+bool js_register_spine4_PathAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_isConstantSpeed);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_isClosed);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_setConstantSpeed);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_setClosed);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_getLengths);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathAttachment_copy);
+
+extern se::Object* __jsb_spine4_PathConstraint_proto;
+extern se::Class* __jsb_spine4_PathConstraint_class;
+
+bool js_register_spine4_PathConstraint(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setSpacing);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getSpacing);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_isActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_setPosition);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraint_getPosition);
+
+extern se::Object* __jsb_spine4_PathConstraintData_proto;
+extern se::Class* __jsb_spine4_PathConstraintData_class;
+
+bool js_register_spine4_PathConstraintData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getOffsetRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getPositionMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getSpacingMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setSpacing);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getRTTI);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setRotateMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getSpacing);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setOffsetRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getRotateMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setPosition);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getPosition);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setSpacingMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintData_setPositionMode);
+
+extern se::Object* __jsb_spine4_PathConstraintMixTimeline_proto;
+extern se::Class* __jsb_spine4_PathConstraintMixTimeline_class;
+
+bool js_register_spine4_PathConstraintMixTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintMixTimeline_getPathConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintMixTimeline_setPathConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintMixTimeline_setFrame);
+
+extern se::Object* __jsb_spine4_PathConstraintPositionTimeline_proto;
+extern se::Class* __jsb_spine4_PathConstraintPositionTimeline_class;
+
+bool js_register_spine4_PathConstraintPositionTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintPositionTimeline_getPathConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintPositionTimeline_setPathConstraintIndex);
+
+extern se::Object* __jsb_spine4_PathConstraintSpacingTimeline_proto;
+extern se::Class* __jsb_spine4_PathConstraintSpacingTimeline_class;
+
+bool js_register_spine4_PathConstraintSpacingTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintSpacingTimeline_getPathConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PathConstraintSpacingTimeline_setPathConstraintIndex);
+
+extern se::Object* __jsb_spine4_PointAttachment_proto;
+extern se::Class* __jsb_spine4_PointAttachment_class;
+
+bool js_register_spine4_PointAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_getRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_setRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_copy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_PointAttachment_setY);
+
+extern se::Object* __jsb_spine4_RegionAttachment_proto;
+extern se::Class* __jsb_spine4_RegionAttachment_class;
+
+bool js_register_spine4_RegionAttachment(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getSequence);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getUVs);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_updateRegion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setRegion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getOffset);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_copy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_setSequence);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RegionAttachment_getRegion);
+
+extern se::Object* __jsb_spine4_RotateTimeline_proto;
+extern se::Class* __jsb_spine4_RotateTimeline_class;
+
+bool js_register_spine4_RotateTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RotateTimeline_setBoneIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RotateTimeline_getBoneIndex);
+
+extern se::Object* __jsb_spine4_TranslateTimeline_proto;
+extern se::Class* __jsb_spine4_TranslateTimeline_class;
+
+bool js_register_spine4_TranslateTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TranslateTimeline_setBoneIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TranslateTimeline_getBoneIndex);
+
+extern se::Object* __jsb_spine4_ScaleTimeline_proto;
+extern se::Class* __jsb_spine4_ScaleTimeline_class;
+
+bool js_register_spine4_ScaleTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ScaleTimeline_setBoneIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ScaleTimeline_getBoneIndex);
+
+extern se::Object* __jsb_spine4_ShearTimeline_proto;
+extern se::Class* __jsb_spine4_ShearTimeline_class;
+
+bool js_register_spine4_ShearTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ShearTimeline_setBoneIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_ShearTimeline_getBoneIndex);
+
+extern se::Object* __jsb_spine4_Skeleton_proto;
+extern se::Class* __jsb_spine4_Skeleton_class;
+
+bool js_register_spine4_Skeleton(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findTransformConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findIkConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findPhysicsConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setBonesToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_physicsTranslate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setSlotsToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getDrawOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getIkConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getUpdateCacheList);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getPathConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getSlots);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_printUpdateCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_physicsRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setTime);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setPosition);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getPhysicsConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getRootBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_updateCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_getTransformConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_setSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_updateWorldTransform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skeleton_findPathConstraint);
+
+extern se::Object* __jsb_spine4_SkeletonBounds_proto;
+extern se::Class* __jsb_spine4_SkeletonBounds_class;
+
+bool js_register_spine4_SkeletonBounds(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getBoundingBoxes);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_aabbintersectsSegment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_aabbcontainsPoint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_intersectsSegment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getBoundingBox);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_containsPoint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getPolygon);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonBounds_getPolygons);
+
+extern se::Object* __jsb_spine4_Polygon_proto;
+extern se::Class* __jsb_spine4_Polygon_class;
+
+bool js_register_spine4_Polygon(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+
+extern se::Object* __jsb_spine4_SkeletonData_proto;
+extern se::Class* __jsb_spine4_SkeletonData_class;
+
+bool js_register_spine4_SkeletonData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getReferenceScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findEvent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findTransformConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setFps);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findIkConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getFps);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getSkins);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findPhysicsConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setVersion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setHash);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getDefaultSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setDefaultSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getHash);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getAnimations);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setImagesPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getIkConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getImagesPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getEvents);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getPathConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getAudioPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getVersion);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getPhysicsConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setHeight);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getWidth);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setReferenceScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getSlots);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getTransformConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_setAudioPath);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_findPathConstraint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonData_getName);
+
+extern se::Object* __jsb_spine4_Skin_proto;
+extern se::Class* __jsb_spine4_Skin_class;
+
+bool js_register_spine4_Skin(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_findNamesForSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_getConstraints);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_removeAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_addSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_copySkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_Skin_findAttachmentsForSlot);
+
+extern se::Object* __jsb_spine4_SlotData_proto;
+extern se::Class* __jsb_spine4_SlotData_class;
+
+bool js_register_spine4_SlotData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getDarkColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getAttachmentName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_setBlendMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getBlendMode);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_hasDarkColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_setHasDarkColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_isVisible);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_setAttachmentName);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_setVisible);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SlotData_getBoneData);
+
+extern se::Object* __jsb_spine4_TransformConstraint_proto;
+extern se::Class* __jsb_spine4_TransformConstraint_class;
+
+bool js_register_spine4_TransformConstraint(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getOrder);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_isActive);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_getMixScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraint_setMixX);
+
+extern se::Object* __jsb_spine4_TransformConstraintData_proto;
+extern se::Class* __jsb_spine4_TransformConstraintData_class;
+
+bool js_register_spine4_TransformConstraintData(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_isRelative);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getRTTI);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setTarget);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setOffsetRotation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixRotate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_isLocal);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setLocal);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getBones);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getMixScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixScaleX);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixScaleY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_getOffsetShearY);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setRelative);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintData_setMixX);
+
+extern se::Object* __jsb_spine4_TransformConstraintTimeline_proto;
+extern se::Class* __jsb_spine4_TransformConstraintTimeline_class;
+
+bool js_register_spine4_TransformConstraintTimeline(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintTimeline_setTransformConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintTimeline_getTransformConstraintIndex);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_TransformConstraintTimeline_setFrame);
+
+extern se::Object* __jsb_spine4_VertexEffect_proto;
+extern se::Class* __jsb_spine4_VertexEffect_class;
+
+bool js_register_spine4_VertexEffect(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+
+extern se::Object* __jsb_spine4_JitterVertexEffect_proto;
+extern se::Class* __jsb_spine4_JitterVertexEffect_class;
+
+bool js_register_spine4_JitterVertexEffect(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+
+extern se::Object* __jsb_spine4_SwirlVertexEffect_proto;
+extern se::Class* __jsb_spine4_SwirlVertexEffect_class;
+
+bool js_register_spine4_SwirlVertexEffect(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+
+extern se::Object* __jsb_spine4_VertexEffectDelegate_proto;
+extern se::Class* __jsb_spine4_VertexEffectDelegate_class;
+
+bool js_register_spine4_VertexEffectDelegate(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_getEffectType);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_initSwirlWithPowOut);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_initSwirlWithPow);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_initJitter);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_getSwirlVertexEffect);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_getVertexEffect);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_getJitterVertexEffect);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_clear);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_VertexEffectDelegate_VertexEffectDelegate);
+
+extern se::Object* __jsb_spine4_SkeletonRenderer_proto;
+extern se::Class* __jsb_spine4_SkeletonRenderer_class;
+
+bool js_register_spine4_SkeletonRenderer(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setUseTint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_render);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_initWithUUID);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setAttachUtil);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setOpacityModifyRGB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_paused);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setBonesToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_onEnable);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setEffect);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_stopSchedule);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_isOpacityModifyRGB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setDebugSlotsEnabled);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_initWithJsonFile);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setSlotsToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_initWithBinaryFile);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_initWithSkeleton);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_getBoundingBox);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_getDebugData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_findBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setDebugMeshEnabled);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_beginSchedule);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_initialize);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setDebugBonesEnabled);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_getTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setSlotsRange);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_onDisable);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_bindNodeProxy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setBatchEnabled);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_findSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_updateWorldTransform);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_getSkeleton);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setVertexEffectDelegate);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonRenderer_SkeletonRenderer);
+
+extern se::Object* __jsb_spine4_SkeletonAnimation_proto;
+extern se::Class* __jsb_spine4_SkeletonAnimation_class;
+
+bool js_register_spine4_SkeletonAnimation(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_findAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackEventListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setMix);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackStartListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_addEmptyAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setDisposeListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackInterruptListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackCompleteListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setAnimationStateData);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setEndListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_getState);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setCompleteListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackDisposeListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_getCurrent);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setEventListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setEmptyAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_clearTrack);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setInterruptListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_addAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setEmptyAnimations);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_clearTracks);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setTrackEndListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setStartListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_createWithBinaryFile);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_create);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_createWithJsonFile);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_setGlobalTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonAnimation_SkeletonAnimation);
+
+extern se::Object* __jsb_spine4_SkeletonDataMgr_proto;
+extern se::Class* __jsb_spine4_SkeletonDataMgr_class;
+
+bool js_register_spine4_SkeletonDataMgr(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonDataMgr_setDestroyCallback);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonDataMgr_getInstance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonDataMgr_SkeletonDataMgr);
+
+extern se::Object* __jsb_spine4_SkeletonCacheMgr_proto;
+extern se::Class* __jsb_spine4_SkeletonCacheMgr_class;
+
+bool js_register_spine4_SkeletonCacheMgr(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheMgr_removeSkeletonCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheMgr_buildSkeletonCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheMgr_destroyInstance);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheMgr_getInstance);
+
+extern se::Object* __jsb_spine4_SkeletonCacheAnimation_proto;
+extern se::Class* __jsb_spine4_SkeletonCacheAnimation_class;
+
+bool js_register_spine4_SkeletonCacheAnimation(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setUseTint);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_findAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setAttachUtil);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_paused);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setBonesToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_onEnable);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setStartListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setEffect);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_isOpacityModifyRGB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setOpacityModifyRGB);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setSlotsToSetupPose);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setEndListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_beginSchedule);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_updateAllAnimationCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_addAnimation);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_update);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_getAttachment);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setCompleteListener);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_updateAnimationCache);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_getTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_findBone);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_onDisable);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setColor);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_bindNodeProxy);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setBatchEnabled);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_setSkin);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_findSlot);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_getSkeleton);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_stopSchedule);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_SkeletonCacheAnimation_SkeletonCacheAnimation);
+
+extern se::Object* __jsb_spine4_AttachUtilBase_proto;
+extern se::Class* __jsb_spine4_AttachUtilBase_class;
+
+bool js_register_spine4_AttachUtilBase(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_AttachUtilBase_associateAttachedNode);
+
+extern se::Object* __jsb_spine4_RealTimeAttachUtil_proto;
+extern se::Class* __jsb_spine4_RealTimeAttachUtil_class;
+
+bool js_register_spine4_RealTimeAttachUtil(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_RealTimeAttachUtil_RealTimeAttachUtil);
+
+extern se::Object* __jsb_spine4_CacheModeAttachUtil_proto;
+extern se::Class* __jsb_spine4_CacheModeAttachUtil_class;
+
+bool js_register_spine4_CacheModeAttachUtil(se::Object* obj);
+bool register_all_cocos2dx_spine4(se::Object* obj);
+SE_DECLARE_FUNC(js_cocos2dx_spine4_CacheModeAttachUtil_CacheModeAttachUtil);
+
+#endif //#if USE_SPINE4 > 0

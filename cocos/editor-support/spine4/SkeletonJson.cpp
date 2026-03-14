@@ -199,7 +199,8 @@ SkeletonData *SkeletonJson::readSkeletonData(const char *json) {
 		data->_scaleY = Json::getFloat(boneMap, "scaleY", 1);
 		data->_shearX = Json::getFloat(boneMap, "shearX", 0);
 		data->_shearY = Json::getFloat(boneMap, "shearY", 0);
-		inherit = Json::getString(boneMap, "inherit", "normal");
+		inherit = Json::getString(boneMap, "inherit", NULL);
+		if (!inherit) inherit = Json::getString(boneMap, "transform", "normal");
 		data->_inherit = Inherit_Normal;
 		if (strcmp(inherit, "normal") == 0) data->_inherit = Inherit_Normal;
 		else if (strcmp(inherit, "onlyTranslation") == 0)

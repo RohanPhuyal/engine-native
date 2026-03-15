@@ -212,6 +212,9 @@ endif # USE_SOCKET
 
 ifneq ($(USE_MIDDLEWARE),0)
 LOCAL_STATIC_LIBRARIES += editor_support_static
+ifeq ($(USE_SPINE4),1)
+LOCAL_STATIC_LIBRARIES += editor_support_spine4_static
+endif
 endif # USE_MIDDLEWARE
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH) \

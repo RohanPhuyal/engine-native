@@ -101,14 +101,6 @@ spine-creator-support/AttachUtil.cpp \
 ../scripting/js-bindings/auto/jsb_cocos2dx_spine_auto.cpp
 endif # USE_SPINE
 
-ifeq ($(USE_SPINE4),1)
-LOCAL_SRC_FILES += \
-$(wildcard spine4/*.cpp) \
-$(wildcard spine4-creator-support/*.cpp) \
-../scripting/js-bindings/manual/jsb_spine4_manual.cpp \
-../scripting/js-bindings/auto/jsb_cocos2dx_spine4_auto.cpp
-endif # USE_SPINE4
-
 ifeq ($(USE_DRAGONBONES),1)
 LOCAL_SRC_FILES += \
 dragonbones/animation/Animation.cpp \
@@ -164,3 +156,102 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
 					$(LOCAL_PATH)/../../external/sources/ 
 
 include $(BUILD_STATIC_LIBRARY)
+
+
+ifeq ($(USE_SPINE4),1)
+include $(CLEAR_VARS)
+LOCAL_MODULE := editor_support_spine4_static
+LOCAL_MODULE_FILENAME := libeditorsupportspine4
+LOCAL_ARM_MODE := arm
+
+LOCAL_SRC_FILES := \
+spine4/Animation.cpp \
+spine4/AnimationState.cpp \
+spine4/AnimationStateData.cpp \
+spine4/Atlas.cpp \
+spine4/AtlasAttachmentLoader.cpp \
+spine4/Attachment.cpp \
+spine4/AttachmentLoader.cpp \
+spine4/AttachmentTimeline.cpp \
+spine4/Bone.cpp \
+spine4/BoneData.cpp \
+spine4/BoundingBoxAttachment.cpp \
+spine4/ClippingAttachment.cpp \
+spine4/ColorTimeline.cpp \
+spine4/ConstraintData.cpp \
+spine4/CurveTimeline.cpp \
+spine4/DeformTimeline.cpp \
+spine4/DrawOrderTimeline.cpp \
+spine4/Event.cpp \
+spine4/EventData.cpp \
+spine4/EventTimeline.cpp \
+spine4/Extension.cpp \
+spine4/IkConstraint.cpp \
+spine4/IkConstraintData.cpp \
+spine4/IkConstraintTimeline.cpp \
+spine4/InheritTimeline.cpp \
+spine4/Json.cpp \
+spine4/LinkedMesh.cpp \
+spine4/Log.cpp \
+spine4/MathUtil.cpp \
+spine4/MeshAttachment.cpp \
+spine4/PathAttachment.cpp \
+spine4/PathConstraint.cpp \
+spine4/PathConstraintData.cpp \
+spine4/PathConstraintMixTimeline.cpp \
+spine4/PathConstraintPositionTimeline.cpp \
+spine4/PathConstraintSpacingTimeline.cpp \
+spine4/PhysicsConstraint.cpp \
+spine4/PhysicsConstraintData.cpp \
+spine4/PhysicsConstraintTimeline.cpp \
+spine4/PointAttachment.cpp \
+spine4/RegionAttachment.cpp \
+spine4/RotateTimeline.cpp \
+spine4/RTTI.cpp \
+spine4/ScaleTimeline.cpp \
+spine4/Sequence.cpp \
+spine4/SequenceTimeline.cpp \
+spine4/ShearTimeline.cpp \
+spine4/Skeleton.cpp \
+spine4/SkeletonBinary.cpp \
+spine4/SkeletonBounds.cpp \
+spine4/SkeletonClipping.cpp \
+spine4/SkeletonData.cpp \
+spine4/SkeletonJson.cpp \
+spine4/Skin.cpp \
+spine4/Slot.cpp \
+spine4/SlotData.cpp \
+spine4/SpineObject.cpp \
+spine4/TextureLoader.cpp \
+spine4/Timeline.cpp \
+spine4/TransformConstraint.cpp \
+spine4/TransformConstraintData.cpp \
+spine4/TransformConstraintTimeline.cpp \
+spine4/TranslateTimeline.cpp \
+spine4/Triangulator.cpp \
+spine4/Updatable.cpp \
+spine4/VertexAttachment.cpp \
+spine4-creator-support/AttachmentVertices.cpp \
+spine4-creator-support/AttachUtil.cpp \
+spine4-creator-support/SkeletonAnimation.cpp \
+spine4-creator-support/SkeletonCache.cpp \
+spine4-creator-support/SkeletonCacheAnimation.cpp \
+spine4-creator-support/SkeletonCacheMgr.cpp \
+spine4-creator-support/SkeletonDataMgr.cpp \
+spine4-creator-support/SkeletonRenderer.cpp \
+spine4-creator-support/spine-cocos2dx.cpp \
+spine4-creator-support/VertexEffectDelegate.cpp \
+../scripting/js-bindings/manual/jsb_spine4_manual.cpp \
+../scripting/js-bindings/auto/jsb_cocos2dx_spine4_auto.cpp
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
+						   $(LOCAL_PATH)/.. \
+						   $(LOCAL_PATH)/../..
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
+					$(LOCAL_PATH)/../.. \
+                    $(LOCAL_PATH)/../../external/android/$(TARGET_ARCH_ABI)/include/v8 \
+					$(LOCAL_PATH)/../../external/sources/ 
+
+include $(BUILD_STATIC_LIBRARY)
+endif # USE_SPINE4

@@ -412,6 +412,11 @@ namespace spine4 {
         _skeletonCache->resetAllAnimationData();
     }
     
+    void SkeletonCacheAnimation::setSkins (const std::vector<std::string>& skinNames) {
+        _skeletonCache->setSkins(skinNames);
+        _skeletonCache->resetAllAnimationData();
+    }
+    
     Attachment* SkeletonCacheAnimation::getAttachment (const std::string& slotName, const std::string& attachmentName) const {
         return _skeletonCache->getAttachment(slotName, attachmentName);
     }

@@ -60,6 +60,7 @@ namespace spine4 {
         
         void setSkin (const std::string& skinName);
         void setSkin (const char* skinName);
+        void setSkins (const std::vector<std::string>& skinNames);
         
         Attachment* getAttachment (const std::string& slotName, const std::string& attachmentName) const;
         bool setAttachment (const std::string& slotName, const std::string& attachmentName);

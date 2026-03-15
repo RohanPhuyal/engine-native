@@ -87,6 +87,9 @@ namespace spine4 {
         /** @param skin May be 0 for no skin.*/
         void setSkin (const char* skinName);
         
+        /* Sets multiple skins to be combined into a single, composite skin. */
+        void setSkins (const std::vector<std::string>& skinNames);
+        
         /* Returns 0 if the slot or attachment was not found. */
         Attachment* getAttachment (const std::string& slotName, const std::string& attachmentName) const;
         /* Returns false if the slot or attachment was not found.
@@ -152,6 +155,7 @@ namespace spine4 {
         Atlas*              _atlas = nullptr;
         AttachmentLoader*   _attachmentLoader = nullptr;
         Skeleton*           _skeleton = nullptr;
+        Skin*               _compositeSkin = nullptr;
         VertexEffectDelegate* _effectDelegate = nullptr;
         float               _timeScale = 1;
         bool                _paused = false;

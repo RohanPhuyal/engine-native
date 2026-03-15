@@ -1,0 +1,1067 @@
+[[90m00:55:47[39m] Using gulpfile E:\old\engine-native\gulpfile.js
+[[90m00:55:47[39m] Starting 'gen-simulator'...
+running: 'rd /s/q "E:\old\engine-native\simulator"'
+
+
+running: ' "python" "E:\old\engine-native\tools/cocos2d-console/bin/cocos.py" compile -p win32 -m debug --no-res --compile-script 0 --vs 2017  && xcopy /Y E:\old\engine-native\tools\simulator\runtime\win32\*.dll E:\old\engine-native\simulator\win32  && xcopy /Y E:\old\engine-native\tools\simulator\runtime\win32\*.exe E:\old\engine-native\simulator\win32  && xcopy /Y E:\old\engine-native\tools\simulator\frameworks\runtime-src\Classes\ide-support\lang E:\old\engine-native\simulator\win32  && if exist E:\old\engine-native\tools\cocos2d-console\plugins\dll\*.dll xcopy /Y E:\old\engine-native\tools\cocos2d-console\plugins\dll\*.dll E:\old\engine-native\simulator\win32'
+
+
+Building mode: debug
+Building...
+Required VS version : [2017]
+Not found devenv. Try to use msbuild instead.
+Found msbuild path: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe
+running: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" /target:simulator /property:Configuration=Debug /maxcpucount:2'
+
+
+Microsoft (R) Build Engine version 15.9.30+gc0e4b0e683 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+Build started 3/16/2026 12:55:48 AM.
+
+     1>
+Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" on node 1 (simulator target(s)).
+
+     1>
+ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Win32".
+
+     1>
+Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (1) is building "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (2) on node 1 (default targets).
+     2>Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (2) is building "E:\old\engine-native\build\libcocos2d.vcxproj" (3) on node 1 (default targets).
+     3>InitializeBuildStatus:
+         Creating "Debug.win32\libcocos2d.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+
+       ClCompile:
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe /c /I"E:\old\engine-native\build\..\cocos" /I"E:\old\engine-native\build\..\external\sources" /I"E:\old\engine-native\build\..\cocos\renderer\gfx" /I"E:\old\engine-native\build\..\cocos\renderer" /I"E:\old\engine-native\build\..\cocos\platform" /I"E:\old\engine-native\build\..\external\win32\include\zlib" /I"E:\old\engine-native\build\..\external\win32\include\v8" /I"E:\old\engine-native\build\..\external\sources\firefox" /I"E:\old\engine-native\build\.." /I"E:\old\engine-native\build\..\external\win32\include" /I"E:\old\engine-native\build\..\external\win32\include\uv" /I"E:\old\engine-native\build\..\cocos\editor-support" /I"E:\old\engine-native\build\..\external\win32\include\freetype" /Zi /nologo /W3 /WX- /diagnostics:classic /MP /Od /Oy- /D WIN32 /D CC_STATIC /D _USRDLL /D _LIB /D COCOS2D_DEBUG=1 /D JS_HAVE____INTN /D JS_INTPTR_TYPE=int /D XP_WIN /D _CRT_SECURE_NO_WARNINGS /D GLFW_EXPOSE_NATIVE_WIN32 /D GLFW_EXPOSE_NATIVE_WGL /D _WINDOWS /D _WIN32 /D __MWERKS__ /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\\" /Fd"Debug.win32\libcocos2d.pdb" /Gd /TP /wd4138 /wd4267 /wd4251 /wd4244 /analyze- /FC /errorReport:queue "..\cocos\editor-support\spine4-creator-support\SkeletonRenderer.cpp"
+
+         SkeletonRenderer.cpp
+
+     3>
+e:\old\engine-native\cocos\renderer\scene\assembler\customassembler.hpp(110): warning C4018: '>=': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(899): warning C4018: '<': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe /c /I"E:\old\engine-native\build\..\cocos" /I"E:\old\engine-native\build\..\external\sources" /I"E:\old\engine-native\build\..\cocos\renderer\gfx" /I"E:\old\engine-native\build\..\cocos\renderer" /I"E:\old\engine-native\build\..\cocos\platform" /I"E:\old\engine-native\build\..\external\win32\include\zlib" /I"E:\old\engine-native\build\..\external\win32\include\v8" /I"E:\old\engine-native\build\..\external\sources\firefox" /I"E:\old\engine-native\build\.." /I"E:\old\engine-native\build\..\external\win32\include" /I"E:\old\engine-native\build\..\external\win32\include\uv" /I"E:\old\engine-native\build\..\cocos\editor-support" /I"E:\old\engine-native\build\..\external\win32\include\freetype" /Zi /nologo /W3 /WX- /diagnostics:classic /MP /Od /Oy- /D WIN32 /D CC_STATIC /D _USRDLL /D _LIB /D COCOS2D_DEBUG=1 /D JS_HAVE____INTN /D JS_INTPTR_TYPE=int /D XP_WIN /D _CRT_SECURE_NO_WARNINGS /D GLFW_EXPOSE_NATIVE_WIN32 /D GLFW_EXPOSE_NATIVE_WGL /D _WINDOWS /D _WIN32 /D __MWERKS__ /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\\" /Fd"Debug.win32\libcocos2d.pdb" /Gd /TP /wd4138 /wd4267 /wd4251 /wd4244 /analyze- /FC /errorReport:queue "..\cocos\scripting\js-bindings\manual\jsb_spine4_manual.cpp"
+
+         jsb_spine4_manual.cpp
+
+     3>e:\old\engine-native\cocos\editor-support\spine4\rtti.h(62): warning C4005: 'RTTI_DECL': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+         e:\old\engine-native\cocos\editor-support\spine\rtti.h(62): note: see previous definition of 'RTTI_DECL'
+     3>e:\old\engine-native\cocos\editor-support\spine4\rtti.h(66): warning C4005: 'RTTI_IMPL_NOPARENT': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine\rtti.h(66): note: see previous definition of 'RTTI_IMPL_NOPARENT'
+     3>e:\old\engine-native\cocos\editor-support\spine4\rtti.h(70): warning C4005: 'RTTI_IMPL': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine\rtti.h(70): note: see previous definition of 'RTTI_IMPL'
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+       PreLinkEvent:
+         if not exist "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\" mkdir "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\"
+         xcopy /Y /Q "E:\old\engine-native\build\..\external\win32\libs\*.*" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\"
+
+         xcopy /Y /Q "E:\old\engine-native\build\..\external\win32\libs\Debug\*.*" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\"
+         :VCEnd
+
+         57 File(s) copied
+
+         4 File(s) copied
+
+       Lib:
+
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\Lib.exe /OUT:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libcocos2d.lib" /NOLOGO Debug.win32\Debug.win32\..\cocos\2d\CCFontAtlas.obj
+         Debug.win32\Debug.win32\..\cocos\2d\CCFontFreetype.obj
+         Debug.win32\Debug.win32\..\cocos\2d\CCLabelLayout.obj
+         Debug.win32\Debug.win32\..\cocos\2d\CCTTFLabelAtlasCache.obj
+         Debug.win32\Debug.win32\..\cocos\2d\CCTTFLabelRenderer.obj
+         Debug.win32\Debug.win32\..\cocos\2d\CCTTFTypes.obj
+         Debug.win32\Debug.win32\..\cocos\audio\AudioEngine.obj
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioCache.obj
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioDecoder.obj
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioDecoderManager.obj
+
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioDecoderMp3.obj
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioDecoderOgg.obj
+         "Debug.win32\Debug.win32\..\cocos\audio\win32\AudioEngine-win32.obj"
+         Debug.win32\Debug.win32\..\cocos\audio\win32\AudioPlayer.obj
+         Debug.win32\Debug.win32\..\cocos\base\base64.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCAutoreleasePool.obj
+         Debug.win32\Debug.win32\..\cocos\base\ccCArray.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCConfiguration.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCData.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCGLUtils.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCLog.obj
+         Debug.win32\Debug.win32\..\cocos\base\ccRandom.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCRef.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCRenderTexture.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCScheduler.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCThreadPool.obj
+         Debug.win32\Debug.win32\..\cocos\base\ccTypes.obj
+         Debug.win32\Debug.win32\..\cocos\base\ccUTF8.obj
+         Debug.win32\Debug.win32\..\cocos\base\ccUtils.obj
+         Debug.win32\Debug.win32\..\cocos\base\CCValue.obj
+         Debug.win32\Debug.win32\..\cocos\base\csscolorparser.obj
+         Debug.win32\Debug.win32\..\cocos\base\etc1.obj
+         Debug.win32\Debug.win32\..\cocos\base\etc2.obj
+         Debug.win32\Debug.win32\..\cocos\base\pvr.obj
+         Debug.win32\Debug.win32\..\cocos\base\TGAlib.obj
+         Debug.win32\Debug.win32\..\cocos\base\ZipUtils.obj
+         Debug.win32\Debug.win32\..\cocos\cocos2d.obj
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\ArmatureCache.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\ArmatureCacheMgr.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\AttachUtil.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\CCArmatureCacheDisplay.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\CCArmatureDisplay.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\CCFactory.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\CCSlot.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones-creator-support\CCTextureAtlasData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\animation\Animation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\animation\AnimationState.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\animation\BaseTimelineState.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\animation\TimelineState.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\animation\WorldClock.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\Armature.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\Bone.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\Constraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\DeformVertices.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\Slot.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\armature\TransformObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\core\BaseObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\core\DragonBones.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\event\EventObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\factory\BaseFactory.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\geom\Point.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\geom\Transform.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\AnimationConfig.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\AnimationData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\ArmatureData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\BoundingBoxData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\CanvasData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\ConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\DisplayData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\DragonBonesData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\SkinData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\TextureAtlasData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\model\UserData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\parser\BinaryDataParser.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\parser\DataParser.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\dragonbones\parser\JSONDataParser.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\MeshBuffer.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\middleware-adapter.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\MiddlewareManager.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\IOBuffer.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\IOTypedArray.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\TypedArrayPool.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\particle\ParticleSimulator.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\AttachmentVertices.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\AttachUtil.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonAnimation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonCache.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonCacheAnimation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonCacheMgr.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonDataMgr.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\SkeletonRenderer.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\spine-cocos2dx.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine-creator-support\VertexEffectDelegate.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\AttachmentVertices.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\AttachUtil.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonAnimation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonCache.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonCacheAnimation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonCacheMgr.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonDataMgr.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\SkeletonRenderer.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\spine-cocos2dx.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\VertexEffectDelegate.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Animation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\AnimationState.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\AnimationStateData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Atlas.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\AtlasAttachmentLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Attachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\AttachmentLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\AttachmentTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Bone.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\BoneData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\BoundingBoxAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\ClippingAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\ColorTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Constraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\ConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\CurveTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\DeformTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\DrawOrderTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Event.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\EventData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\EventTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Extension.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\IkConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\IkConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\IkConstraintTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Json.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\LinkedMesh.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\MathUtil.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\MeshAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathConstraintMixTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathConstraintPositionTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PathConstraintSpacingTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\PointAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\RegionAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\RotateTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\RTTI.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\ScaleTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\ShearTimeline.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Skeleton.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SkeletonBinary.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SkeletonBounds.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SkeletonClipping.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SkeletonData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SkeletonJson.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Skin.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Slot.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SlotData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\SpineObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TextureLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Timeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TransformConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TransformConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TransformConstraintTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TranslateTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Triangulator.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\TwoColorTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\Updatable.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\VertexAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine\VertexEffect.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Animation.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\AnimationState.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\AnimationStateData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Atlas.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\AtlasAttachmentLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Attachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\AttachmentLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\AttachmentTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Bone.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\BoneData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\BoundingBoxAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\ClippingAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\ColorTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\ConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\CurveTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\DeformTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\DrawOrderTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Event.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\EventData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\EventTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Extension.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\IkConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\IkConstraintData.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\IkConstraintTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\InheritTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Json.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\LinkedMesh.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Log.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\MathUtil.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\MeshAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathConstraintMixTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathConstraintPositionTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PathConstraintSpacingTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PhysicsConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PhysicsConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PhysicsConstraintTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\PointAttachment.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\RegionAttachment.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\RotateTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\RTTI.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\ScaleTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Sequence.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SequenceTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\ShearTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Skeleton.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonBinary.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonBounds.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonClipping.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonJson.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SkeletonRenderer.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Skin.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Slot.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SlotData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\SpineObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\TextureLoader.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Timeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\TransformConstraint.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\TransformConstraintData.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\TransformConstraintTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\TranslateTimeline.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Triangulator.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\Updatable.obj"
+         "Debug.win32\Debug.win32\..\cocos\editor-support\spine4\VertexAttachment.obj"
+         Debug.win32\Debug.win32\..\cocos\math\CCGeometry.obj
+         Debug.win32\Debug.win32\..\cocos\math\CCVertex.obj
+         Debug.win32\Debug.win32\..\cocos\math\Mat4.obj
+         Debug.win32\Debug.win32\..\cocos\math\MathUtil.obj
+         Debug.win32\Debug.win32\..\cocos\math\Quaternion.obj
+         Debug.win32\Debug.win32\..\cocos\math\Vec2.obj
+
+         Debug.win32\Debug.win32\..\cocos\math\Vec3.obj
+         Debug.win32\Debug.win32\..\cocos\math\Vec4.obj
+         "Debug.win32\Debug.win32\..\cocos\network\CCDownloader-curl.obj"
+         Debug.win32\Debug.win32\..\cocos\network\CCDownloader.obj
+         Debug.win32\Debug.win32\..\cocos\network\HttpClient.obj
+         Debug.win32\Debug.win32\..\cocos\network\HttpCookie.obj
+         Debug.win32\Debug.win32\..\cocos\network\SocketIO.obj
+         Debug.win32\Debug.win32\..\cocos\network\Uri.obj
+         "Debug.win32\Debug.win32\..\cocos\network\WebSocket-libwebsockets.obj"
+         Debug.win32\Debug.win32\..\cocos\network\WebSocketServer.obj
+         Debug.win32\Debug.win32\..\cocos\platform\CCFileUtils.obj
+         Debug.win32\Debug.win32\..\cocos\platform\CCImage.obj
+         Debug.win32\Debug.win32\..\cocos\platform\CCSAXParser.obj
+         "Debug.win32\Debug.win32\..\cocos\platform\desktop\CCGLView-desktop.obj"
+         "Debug.win32\Debug.win32\..\cocos\platform\win32\CCApplication-win32.obj"
+         "Debug.win32\Debug.win32\..\cocos\platform\win32\CCCanvasRenderingContext2D-win32.obj"
+         "Debug.win32\Debug.win32\..\cocos\platform\win32\CCDevice-win32.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\platform\win32\CCFileUtils-win32.obj"
+         "Debug.win32\Debug.win32\..\cocos\platform\win32\CCUtils-win32.obj"
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\DeviceGraphics.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\FrameBuffer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\GFX.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\GFXUtils.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\GraphicsHandle.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\IndexBuffer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\Program.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\RenderBuffer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\RenderTarget.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\State.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\Texture.obj
+
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\Texture2D.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\VertexBuffer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\gfx\VertexFormat.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\BaseRenderer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Camera.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Config.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\EffectVariant.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Effect.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\EffectBase.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\ForwardRenderer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\InputAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Light.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Model.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Pass.obj
+
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\ProgramLib.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\RendererUtils.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Scene.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\Technique.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\renderer\View.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\Assembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\AssemblerBase.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\AssemblerSprite.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\CustomAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\MaskAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\RenderData.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\RenderDataList.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\SimpleSprite2D.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\SlicedSprite2D.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\SimpleSprite3D.obj
+
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\SlicedSprite3D.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\TiledMapAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\MeshAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\assembler\Particle3DAssembler.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\MemPool.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\MeshBuffer.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\ModelBatcher.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\NodeMemPool.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\NodeProxy.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\ParallelTask.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\RenderFlow.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\scene\StencilManager.obj
+         Debug.win32\Debug.win32\..\cocos\renderer\Types.obj
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_audioengine_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_dragonbones_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_editor_support_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_extension_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_network_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_particle_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_spine_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_cocos2dx_spine4_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_gfx_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\auto\jsb_renderer_auto.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\event\EventDispatcher.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\config.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\HandleObject.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\MappingUtils.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\RefCounter.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\State.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\Value.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\Class.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\Object.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\ObjectWrap.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\ScriptEngine.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\Utils.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\env.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\http_parser.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\inspector_agent.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\inspector_io.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\inspector_socket.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\inspector_socket_server.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\node.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\node_debug_options.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\SHA1.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\jswrapper\v8\debugger\util.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_classtype.obj"
+
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_cocos2dx_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_cocos2dx_network_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_conversions.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_dragonbones_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_gfx_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_global.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_helper.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_opengl_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_opengl_utils.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_platfrom_win32.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_renderer_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_socketio.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_spine_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_spine4_manual.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_websocket.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_websocket_server.obj"
+         "Debug.win32\Debug.win32\..\cocos\scripting\js-bindings\manual\jsb_xmlhttprequest.obj"
+         "Debug.win32\Debug.win32\..\cocos\storage\local-storage\LocalStorage.obj"
+         "Debug.win32\Debug.win32\..\cocos\ui\edit-box\EditBox-win32.obj"
+         "Debug.win32\Debug.win32\..\extensions\assets-manager\AssetsManagerEx.obj"
+         "Debug.win32\Debug.win32\..\extensions\assets-manager\CCAsyncTaskPool.obj"
+         "Debug.win32\Debug.win32\..\extensions\assets-manager\CCEventAssetsManagerEx.obj"
+         "Debug.win32\Debug.win32\..\extensions\assets-manager\Manifest.obj"
+         Debug.win32\Debug.win32\..\external\sources\ConvertUTF\ConvertUTF.obj
+         Debug.win32\Debug.win32\..\external\sources\ConvertUTF\ConvertUTFWrapper.obj
+         Debug.win32\Debug.win32\..\external\sources\edtaa3func\edtaa3func.obj
+         Debug.win32\Debug.win32\..\external\sources\tinyxml2\tinyxml2.obj
+
+         Debug.win32\Debug.win32\..\external\sources\unzip\ioapi.obj
+         Debug.win32\Debug.win32\..\external\sources\unzip\ioapi_mem.obj
+         Debug.win32\Debug.win32\..\external\sources\unzip\unzip.obj
+         Debug.win32\Debug.win32\..\external\sources\xxtea\xxtea.obj
+
+     3>RenderTarget.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>
+GFX.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>SkeletonRenderer.obj : warning LNK4006: "public: __thiscall spine4::SkeletonRenderer::SkeletonRenderer(void)" (??0SkeletonRenderer@spine4@@QAE@XZ) already defined in SkeletonRenderer.obj; second definition ignored [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>SkeletonRenderer.obj : warning LNK4006: "public: virtual __thiscall spine4::SkeletonRenderer::~SkeletonRenderer(void)" (??1SkeletonRenderer@spine4@@UAE@XZ) already defined in SkeletonRenderer.obj; second definition ignored [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>
+ccRandom.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+         libcocos2d.vcxproj -> E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libcocos2d.lib
+
+       CopyFilesToOutputDirectory:
+         Copying file from "Debug.win32\libcocos2d.pdb" to "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libcocos2d.pdb".
+
+       FinalizeBuildStatus:
+         Deleting file "Debug.win32\libcocos2d.tlog\unsuccessfulbuild".
+
+         Touching "Debug.win32\libcocos2d.tlog\libcocos2d.lastbuildstate".
+
+     3>
+Done Building Project "E:\old\engine-native\build\libcocos2d.vcxproj" (default targets).
+
+     2>
+Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (2) is building "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj" (4) on node 1 (default targets).
+     4>Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj" (4) is building "E:\old\engine-native\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj" (5) on node 1 (default targets).
+     5>InitializeBuildStatus:
+
+         Creating "Debug.win32\libsimulator.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+
+       ClCompile:
+         All outputs are up-to-date.
+
+       Lib:
+         All outputs are up-to-date.
+
+         libsimulator.vcxproj -> E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libsimulator.lib
+
+       FinalizeBuildStatus:
+         Deleting file "Debug.win32\libsimulator.tlog\unsuccessfulbuild".
+
+         Touching "Debug.win32\libsimulator.tlog\libsimulator.lastbuildstate".
+
+     5>
+Done Building Project "E:\old\engine-native\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj" (default targets).
+
+     4>
+InitializeBuildStatus:
+         Creating "Debug.win32\simulator.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+
+       PreBuildEvent:
+         if not exist "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\" mkdir "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\"
+         
+         xcopy /Y /Q "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\Classes\ide-support\lang" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\"
+         
+         :VCEnd
+
+         1 File(s) copied
+
+       ClCompile:
+         All outputs are up-to-date.
+
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /l"0x0409" /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IDebug.win32\ /nologo /fo"Debug.win32\game.res" game.rc 
+
+       Link:
+
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\\" /LIBPATH:"E:\old\engine-native\build\..\external\win32\libs" /LIBPATH:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\\" libcurl.lib websockets.lib v8.dll.lib v8_libbase.dll.lib v8_libplatform.dll.lib libuv.lib libcocos2d.lib opengl32.lib glew32.lib libzlib.lib libiconv.lib freetype.lib winmm.lib ws2_32.lib Psapi.lib Iphlpapi.lib Userenv.lib libcurl.lib websockets.lib libwebp.lib sqlite3.lib OpenAL32.lib libmpg123.lib libvorbisfile.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.lib" /MACHINE:X86 Debug.win32\game.res
+         Debug.win32\jsb_module_register.obj
+         Debug.win32\AppDelegate.obj
+         Debug.win32\RuntimeJsImpl.obj
+         Debug.win32\main.obj
+         Debug.win32\SimulatorWin.obj
+         Debug.win32\stdafx.obj
+         "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libcocos2d.lib"
+         "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libsimulator.lib"
+
+         libuv.lib(uv-common.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+
+     4>
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+            Creating library E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.lib and object E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.exp
+
+     4>
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         Generating code
+
+         Finished generating code
+
+     4>libuv.lib(uv-common.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(uv-common.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engin
+e-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(handle.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(handle.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(async.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(async.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(timer.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(timer.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(util.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(util.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(version.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(version.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(stream.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(stream.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(tcp.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(tcp.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(getaddrinfo.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(getaddrinfo.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(core.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(core.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(fs.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(thread.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(thread.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(udp.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(udp.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(inet.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(inet.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(fs-poll.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs-poll.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(loop-watcher.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(loop-watcher.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(fs-event.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs-event.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(pipe.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(pipe.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(process.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(process.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(tty.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(tty.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(poll.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(poll.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(signal.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(signal.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(error.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(error.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(winapi.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(winapi.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(winsock.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(winsock.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(threadpool.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(threadpool.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(detect-wakeup.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(detect-wakeup.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libuv.lib(process-stdio.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(process-stdio.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_aux.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_aux.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_close.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_close.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_codec.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_codec.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_color.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_color.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_compress.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_compress.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_dir.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dir.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_dirinfo.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirinfo.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_dirread.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirread.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_dirwrite.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirwrite.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_dumpmode.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dumpmode.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_error.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_error.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_fax3.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_fax3sm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3sm.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_getimage.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_getimage.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_flush.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_flush.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_luv.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_luv.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_lzw.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_lzw.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_next.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_next.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_open.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_open.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_packbits.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_packbits.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_predict.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_predict.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_read.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_read.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_swab.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_swab.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>libtiff-2015.lib(tif_strip.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_strip.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
+ [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_thunder.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_thunder.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_tile.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_tile.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_warning.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_warning.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_write.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_write.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+     4>
+libtiff-2015.lib(tif_win32.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_win32.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         simulator.vcxproj -> E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\simulator.exe
+
+       PostBuildEvent:
+         if not exist "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime" mkdir "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime"
+         
+
+         if not exist "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime\win32" mkdir "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime\win32"
+         
+         xcopy /Y /Q "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\*.dll" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime\win32"
+         xcopy /Y /Q "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\*.exe" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime\win32"
+         xcopy /Y /Q "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\lang" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\runtime\win32"
+         
+         
+         if exist "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\..\..\simulator\win32\config.json" copy "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\..\..\..\..\..\simulator\win32\config.json" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\config.json" 
+         
+         :VCEnd
+
+         25 File(s) copied
+
+         1 File(s) copied
+
+         1 File(s) copied
+
+       FinalizeBuildStatus:
+         Deleting file "Debug.win32\simulator.tlog\unsuccessfulbuild".
+
+         Touching "Debug.win32\simulator.tlog\simulator.lastbuildstate".
+
+     4>
+Done Building Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj" (default targets).
+
+     2>
+Done Building Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default targets).
+
+     1>
+Done Building Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target(s)).
+
+
+
+Build succeeded.
+
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+       "E:\old\engine-native\build\libcocos2d.vcxproj" (default target) (3) ->
+       (ClCompile target) -> 
+
+         e:\old\engine-native\cocos\renderer\scene\assembler\customassembler.hpp(110): warning C4018: '>=': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(899): warning C4018: '<': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+       "E:\old\engine-native\build\libcocos2d.vcxproj" (default target) (3) ->
+         e:\old\engine-native\cocos\editor-support\spine4\rtti.h(62): warning C4005: 'RTTI_DECL': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine4\rtti.h(66): warning C4005: 'RTTI_IMPL_NOPARENT': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine4\rtti.h(70): warning C4005: 'RTTI_IMPL': macro redefinition [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+
+       "E:\old\engine-native\build\libcocos2d.vcxproj" (default target) (3) ->
+       (Lib target) -> 
+         RenderTarget.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+         GFX.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+         SkeletonRenderer.obj : warning LNK4006: "public: __thiscall spine4::SkeletonRenderer::SkeletonRenderer(void)" (??0SkeletonRenderer@spine4@@QAE@XZ) already defined in SkeletonRenderer.obj; second definition ignored [E:\old\engine-native\build\libcocos2d.vcxproj]
+         SkeletonRenderer.obj : warning LNK4006: "public: virtual __thiscall spine4::SkeletonRenderer::~SkeletonRenderer(void)" (??1SkeletonRenderer@spine4@@UAE@XZ) already defined in SkeletonRenderer.obj; second definition ignored [E:\old\engine-native\build\libcocos2d.vcxproj]
+         ccRandom.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj" (default target) (4) ->
+       (Link target) -> 
+         LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(uv-common.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(uv-common.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\
+old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(handle.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(handle.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(async.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(async.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(timer.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(timer.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(util.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(util.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(version.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(version.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(stream.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(stream.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(tcp.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(tcp.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(getaddrinfo.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(getaddrinfo.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(core.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(core.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(fs.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(thread.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(thread.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(udp.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(udp.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(inet.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(inet.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(fs-poll.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs-poll.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(loop-watcher.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(loop-watcher.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(fs-event.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(fs-event.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(pipe.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(pipe.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(process.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(process.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(tty.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(tty.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(poll.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(poll.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(signal.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(signal.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(error.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(error.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(winapi.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(winapi.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(winsock.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(winsock.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(threadpool.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(threadpool.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libuv.lib(detect-wakeup.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(detect-wakeup.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libuv.lib(process-stdio.obj) : warning LNK4099: PDB 'libuv.pdb' was not found with 'libuv.lib(process-stdio.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\libuv.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_aux.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_aux.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_close.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_close.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_codec.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_codec.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_color.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_color.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_compress.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_compress.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_dir.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dir.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_dirinfo.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirinfo.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_dirread.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirread.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_dirwrite.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirwrite.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_dumpmode.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dumpmode.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_error.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_error.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_fax3.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_fax3sm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3sm.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_getimage.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_getimage.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as i
+f no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_flush.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_flush.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_luv.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_luv.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_lzw.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_lzw.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_next.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_next.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_open.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_open.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no deb
+ug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_packbits.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_packbits.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_predict.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_predict.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+         libtiff-2015.lib(tif_read.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_read.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_swab.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_swab.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_strip.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_strip.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_thunder.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_thunder.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_tile.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_tile.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_warning.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_warning.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_write.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_write.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+         libtiff-2015.lib(tif_win32.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_win32.obj)' or at 'E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info [E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj]
+
+
+    69 Warning(s)
+    0 Error(s)
+
+
+Time Elapsed 00:00:07.59
+
+Build succeed.
+Copying simulator.exe
+Copying dbghelp.dll
+Copying freetype.dll
+Copying glew32.dll
+Copying iconv.dll
+Copying icui18n.dll
+Copying icuuc.dll
+Copying libcrypto-1_1.dll
+Copying libcurl.dll
+Copying libmpg123.dll
+Copying libogg.dll
+Copying libssl-1_1.dll
+Copying libtiff.dll
+Copying libvorbis.dll
+Copying libvorbisfile.dll
+Copying mozjs-52.dll
+Copying nspr4.dll
+Copying OpenAL32.dll
+Copying sqlite3.dll
+Copying uv.dll
+Copying v8.dll
+Copying v8_libbase.dll
+Copying v8_libplatform.dll
+Copying websockets.dll
+Copying zlib.dll
+Copying zlib1.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\dbghelp.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\freetype.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\glew32.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\iconv.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\icui18n.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\icuuc.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libcrypto-1_1.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libcurl.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libmpg123.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libogg.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libssl-1_1.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libtiff.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libvorbis.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\libvorbisfile.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\mozjs-52.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\nspr4.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\OpenAL32.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\sqlite3.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\uv.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\v8.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\v8_libbase.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\v8_libplatform.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\websockets.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\zlib.dll
+
+E:\old\engine-native\tools\simulator\runtime\win32\zlib1.dll
+
+25 File(s) copied
+
+E:\old\engine-native\tools\simulator\runtime\win32\simulator.exe
+
+1 File(s) copied
+
+E:\old\engine-native\tools\simulator\frameworks\runtime-src\Classes\ide-support\lang
+
+1 File(s) copied
+
+
+Build Win32 debug success.
+
+
+
+[[90m00:55:56[39m] Finished 'gen-simulator' after 8.6 s

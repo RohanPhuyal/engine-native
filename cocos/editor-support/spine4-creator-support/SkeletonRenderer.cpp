@@ -146,22 +146,31 @@ SkeletonRenderer::SkeletonRenderer (const std::string& skeletonDataFile, const s
 }
 
 SkeletonRenderer::~SkeletonRenderer () {
+    if (_ownsSkeletonData) {
+        delete _skeleton->getData();
+    }
+    if (_ownsSkeleton) {
+        delete _skeleton;
+    }
+    if (_ownsAtlas && _atlas) {
+        delete _atlas;
+    }
+    if (_attachmentLoader) {
+        delete _attachmentLoader;
+    }
+    if (_compositeSkin) {
+        delete _compositeSkin;
+    }
     CC_SAFE_RELEASE(_effectDelegate);
-    if (_ownsSkeletonData) delete _skeleton->getData();
-    if (_ownsSkeleton) delete _skeleton;
-    if (_ownsAtlas && _atlas) delete _atlas;
-    if (_attachmentLoader) delete _attachmentLoader;
     if (_uuid != "") SkeletonDataMgr::getInstance()->releaseByUUID(_uuid);
     if (_clipper) delete _clipper;
-    
     if (_debugBuffer) {
         delete _debugBuffer;
         _debugBuffer = nullptr;
     }
-    
-    CC_SAFE_RELEASE(_attachUtil);
     CC_SAFE_RELEASE(_nodeProxy);
     CC_SAFE_RELEASE(_effect);
+    CC_SAFE_RELEASE(_attachUtil);
     stopSchedule();
 }
 
@@ -967,6 +976,42 @@ void SkeletonRenderer::setSkin (const char* skinName) {
         _skeleton->setSkin(skinName);
         _skeleton->setSlotsToSetupPose();
     }
+}
+
+void SkeletonRenderer::setSkins (const std::vector<std::string>& skinNames) {
+    if (!_skeleton || !_skeleton->getData()) return;
+    
+    if (_compositeSkin) {
+        delete _compositeSkin;
+        _compositeSkin = nullptr;
+    }
+
+    std::vector<spine4::Skin*> validSkins;
+    for (const std::string& skinName : skinNames) {
+        if (skinName.empty()) continue;
+        spine4::Skin* skin = _skeleton->getData()->findSkin(skinName.c_str());
+        cocos2d::log("native spine4 setSkins processing: %s, found: %d", skinName.c_str(), skin != nullptr);
+        if (skin) {
+            validSkins.push_back(skin);
+        } else {
+            cocos2d::log("Skin not found in native: %s", skinName.c_str());
+        }
+    }
+
+    cocos2d::log("native spine4 setSkins valid skins count: %d", (int)validSkins.size());
+    if (validSkins.empty()) {
+        _skeleton->setSkin(nullptr);
+    } else if (validSkins.size() == 1) {
+        _skeleton->setSkin(validSkins[0]);
+    } else {
+        _compositeSkin = new (__FILE__, __LINE__) spine4::Skin("__cocos-combined-skin__");
+        for (spine4::Skin* skin : validSkins) {
+            _compositeSkin->addSkin(skin);
+        }
+        _skeleton->setSkin(_compositeSkin);
+    }
+
+    _skeleton->setSlotsToSetupPose();
 }
 
 Attachment* SkeletonRenderer::getAttachment (const std::string& slotName, const std::string& attachmentName) const {

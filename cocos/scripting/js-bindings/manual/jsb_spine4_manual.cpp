@@ -233,6 +233,28 @@ static bool js_register_spine4_retainSkeletonData(se::State& s)
 }
 SE_BIND_FUNC(js_register_spine4_retainSkeletonData)
 
+static bool js_cocos2dx_spine4_SkeletonRenderer_setSkins(se::State& s)
+{
+    spine4::SkeletonRenderer* cobj = (spine4::SkeletonRenderer*)s.nativeThisObject();
+    SE_PRECONDITION2(cobj, false, "js_cocos2dx_spine4_SkeletonRenderer_setSkins : Invalid Native Object");
+    const auto& args = s.args();
+    size_t argc = args.size();
+    CC_UNUSED bool ok = true;
+    if (argc == 1) {
+        std::vector<std::string> arg0;
+        ok &= seval_to_std_vector_string(args[0], &arg0);
+        SE_PRECONDITION2(ok, false, "js_cocos2dx_spine4_SkeletonRenderer_setSkins : Error processing arguments");
+        for (const auto& skin : arg0) {
+            cocos2d::log("js_cocos2dx_spine4_SkeletonRenderer_setSkins extracted skin: %s", skin.c_str());
+        }
+        cobj->setSkins(arg0);
+        return true;
+    }
+    SE_REPORT_ERROR("wrong number of arguments: %d, was expecting %d", (int)argc, 1);
+    return false;
+}
+SE_BIND_FUNC(js_cocos2dx_spine4_SkeletonRenderer_setSkins)
+
 bool register_all_spine4_manual(se::Object* obj)
 {
     // Get the ns
@@ -249,6 +271,14 @@ bool register_all_spine4_manual(se::Object* obj)
     ns->defineFunction("initSkeletonData", _SE(js_register_spine4_initSkeletonData));
     ns->defineFunction("retainSkeletonData", _SE(js_register_spine4_retainSkeletonData));
     ns->defineFunction("disposeSkeletonData", _SE(js_register_spine4_disposeSkeletonData));
+    
+    // Manual binding for setSkins
+    if (__jsb_spine4_SkeletonRenderer_proto) {
+        __jsb_spine4_SkeletonRenderer_proto->defineFunction("setSkins", _SE(js_cocos2dx_spine4_SkeletonRenderer_setSkins));
+    }
+    if (__jsb_spine4_SkeletonAnimation_proto) {
+        __jsb_spine4_SkeletonAnimation_proto->defineFunction("setSkins", _SE(js_cocos2dx_spine4_SkeletonRenderer_setSkins));
+    }
     
     spine4::setSpineObjectDisposeCallback([](void* spineObj){
         se::Object* seObj = nullptr;

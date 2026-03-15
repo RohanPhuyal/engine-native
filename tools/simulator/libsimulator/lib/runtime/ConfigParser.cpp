@@ -153,8 +153,9 @@ _isWindowTop(false),
 _consolePort(kProjectConfigConsolePort),
 _uploadPort(kProjectConfigUploadPort),
 _debugPort(kProjectConfigDebugger),
+_isWaitForConnect(false), // Explicitly initialize to false
 _viewName("simulator"),
-_entryfile(""),
+_entryfile("") ,
 _initViewSize(ProjectConfig::DEFAULT_HEIGHT, ProjectConfig::DEFAULT_WIDTH),
 _bindAddress("")
 {

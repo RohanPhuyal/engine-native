@@ -1,0 +1,65 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "a87c5304d4feb003017042487f3cc3dc0ef1c17478e9ef5f1f38b0f13a56a5a6"
+    }
+  ],
+  "containerPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/tools/simulator/frameworks/runtime-src/proj.ios_mac/simulator.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx14.5",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator/Build/Products",
+      "derivedDataPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator",
+      "indexDataStoreFolderPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/rpanepal/Downloads/Cocos Engine Custom/engine-native/build/xcode-mac-simulator/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "CODE_SIGNING_ALLOWED" : "NO",
+          "CODE_SIGNING_REQUIRED" : "NO"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

@@ -72,6 +72,10 @@ THE SOFTWARE.
 #define USE_SPINE 1
 #endif
 
+#ifndef USE_SPINE4
+#define USE_SPINE4 1
+#endif
+
 #ifndef USE_DRAGONBONES
 #define USE_DRAGONBONES 1
 #endif

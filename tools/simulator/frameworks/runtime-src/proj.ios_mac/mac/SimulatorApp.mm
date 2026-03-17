@@ -33,6 +33,7 @@
 #import "SimulatorApp.h"
 #include "AppDelegate.h"
 #include "glfw3.h"
+#define GLFW_EXPOSE_NATIVE_COCOA
 #include "glfw3native.h"
 #include "runtime/Runtime.h"
 #include "runtime/ConfigParser.h"

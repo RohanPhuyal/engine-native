@@ -1,0 +1,139 @@
+[[90m00:47:10[39m] Using gulpfile E:\old\engine-native\gulpfile.js
+[[90m00:47:10[39m] Starting 'gen-simulator'...
+running: 'rd /s/q "E:\old\engine-native\simulator"'
+
+
+running: ' "python" "E:\old\engine-native\tools/cocos2d-console/bin/cocos.py" compile -p win32 -m debug --no-res --compile-script 0 --vs 2017  && xcopy /Y E:\old\engine-native\tools\simulator\runtime\win32\*.dll E:\old\engine-native\simulator\win32  && xcopy /Y E:\old\engine-native\tools\simulator\runtime\win32\*.exe E:\old\engine-native\simulator\win32  && xcopy /Y E:\old\engine-native\tools\simulator\frameworks\runtime-src\Classes\ide-support\lang E:\old\engine-native\simulator\win32  && if exist E:\old\engine-native\tools\cocos2d-console\plugins\dll\*.dll xcopy /Y E:\old\engine-native\tools\cocos2d-console\plugins\dll\*.dll E:\old\engine-native\simulator\win32'
+
+
+Building mode: debug
+Building...
+Required VS version : [2017]
+Not found devenv. Try to use msbuild instead.
+Found msbuild path: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe
+running: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe" "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" /target:simulator /property:Configuration=Debug /maxcpucount:2'
+
+
+Microsoft (R) Build Engine version 15.9.30+gc0e4b0e683 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+Build started 3/16/2026 12:47:11 AM.
+
+     1>
+Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" on node 1 (simulator target(s)).
+
+     1>ValidateSolutionConfiguration:
+
+         Building solution configuration "Debug|Win32".
+
+     1>Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (1) is building "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (2) on node 1 (default targets).
+
+     2>Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (2) is building "E:\old\engine-native\build\libcocos2d.vcxproj" (3) on node 1 (default targets).
+     3>InitializeBuildStatus:
+         Touching "Debug.win32\libcocos2d.tlog\unsuccessfulbuild".
+
+       ClCompile:
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         All outputs are up-to-date.
+
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe /c /I"E:\old\engine-native\build\..\cocos" /I"E:\old\engine-native\build\..\external\sources" /I"E:\old\engine-native\build\..\cocos\renderer\gfx" /I"E:\old\engine-native\build\..\cocos\renderer" /I"E:\old\engine-native\build\..\cocos\platform" /I"E:\old\engine-native\build\..\external\win32\include\zlib" /I"E:\old\engine-native\build\..\external\win32\include\v8" /I"E:\old\engine-native\build\..\external\sources\firefox" /I"E:\old\engine-native\build\.." /I"E:\old\engine-native\build\..\external\win32\include" /I"E:\old\engine-native\build\..\external\win32\include\uv" /I"E:\old\engine-native\build\..\cocos\editor-support" /I"E:\old\engine-native\build\..\external\win32\include\freetype" /Zi /nologo /W3 /WX- /diagnostics:classic /MP /Od /Oy- /D WIN32 /D CC_STATIC /D _USRDLL /D _LIB /D COCOS2D_DEBUG=1 /D JS_HAVE____INTN /D JS_INTPTR_TYPE=int /D XP_WIN /D _CRT_SECURE_NO_WARNINGS /D GLFW_EXPOSE_NATIVE_WIN32 /D GLFW_EXPOSE_NATIVE_WGL /D _WINDOWS /D _WIN32 /D __MWERKS__ /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\Debug.win32\..\cocos\editor-support\spine4-creator-support\\" /Fd"Debug.win32\libcocos2d.pdb" /Gd /TP /wd4138 /wd4267 /wd4251 /wd4244 /analyze- /FC /errorReport:queue "..\cocos\editor-support\spine4-creator-support\SkeletonRenderer.cpp"
+
+         SkeletonRenderer.cpp
+
+     3>
+e:\old\engine-native\cocos\renderer\scene\assembler\customassembler.hpp(110): warning C4018: '>=': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>
+e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(167): error C2039: 'release': is not a member of 'cocos2d::middleware::IOTypedArray' [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+         e:\old\engine-native\cocos\editor-support\iotypedarray.h(35): note: see declaration of 'cocos2d::middleware::IOTypedArray'
+
+     3>e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(896): warning C4018: '<': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+     3>Done Building Project "E:\old\engine-native\build\libcocos2d.vcxproj" (default targets) -- FAILED.
+
+     2>Done Building Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default targets) -- FAILED.
+
+     1>
+Done Building Project "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target(s)) -- FAILED.
+
+
+
+Build FAILED.
+
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+       "E:\old\engine-native\build\libcocos2d.vcxproj" (default target) (3) ->
+       (ClCompile target) -> 
+
+         e:\old\engine-native\cocos\renderer\scene\assembler\customassembler.hpp(110): warning C4018: '>=': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+         e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(896): warning C4018: '<': signed/unsigned mismatch [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+
+
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.sln" (simulator target) (1) ->
+       "E:\old\engine-native\tools\simulator\frameworks\runtime-src\proj.win32\simulator.vcxproj.metaproj" (default target) (2) ->
+       "E:\old\engine-native\build\libcocos2d.vcxproj" (default target) (3) ->
+       (ClCompile target) -> 
+         e:\old\engine-native\cocos\editor-support\spine4-creator-support\skeletonrenderer.cpp(167): error C2039: 'release': is not a member of 'cocos2d::middleware::IOTypedArray' [E:\old\engine-native\build\libcocos2d.vcxproj]
+
+
+    2 Warning(s)
+    1 Error(s)
+
+
+Time Elapsed 00:00:01.52
+
+Error running command, return code: 1.
+
+
+
+
+Error running command, return code: 14.
+
+[[90m00:47:12[39m] 'gen-simulator' errored after 2.09 s
+[[90m00:47:12[39m] Error: Generate simulator failed
+    at formatError (E:\old\engine-native\node_modules\gulp\bin\gulp.js:169:10)
+    at Gulp.<anonymous> (E:\old\engine-native\node_modules\gulp\bin\gulp.js:195:15)
+    at Gulp.emit (events.js:198:13)
+    at Gulp.Orchestrator._emitTaskDone (E:\old\engine-native\node_modules\orchestrator\index.js:264:8)
+    at E:\old\engine-native\node_modules\orchestrator\index.js:275:23
+    at finish (E:\old\engine-native\node_modules\orchestrator\lib\runTask.js:21:8)
+    at cb (E:\old\engine-native\node_modules\orchestrator\lib\runTask.js:29:3)
+    at ChildProcess.child.on (E:\old\engine-native\gulpfile.js:171:17)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)

@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'Simulator Mac' in project 'simulator'
+➜ Explicit dependency on target 'libsimulator Mac' in project 'libsimulator'
+➜ Explicit dependency on target 'libcocos2d Mac' in project 'cocos2d_libs'
+Target 'libcocos2d Mac' in project 'cocos2d_libs' (no dependencies)
+Target 'libsimulator Mac' in project 'libsimulator' (no dependencies)

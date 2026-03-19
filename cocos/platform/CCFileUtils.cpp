@@ -1242,6 +1242,7 @@ long FileUtils::getFileSize(const std::string &filepath)
 #include <sys/types.h>
 #include <errno.h>
 #include <dirent.h>
+#include <cstring>
 
 // android doesn't have ftw.h
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
@@ -1333,6 +1334,66 @@ namespace
         
         return rv;
     }
+#else
+    bool removeDirectoryAndroidRecursive(const std::string& path)
+    {
+        if (path.empty())
+        {
+            return false;
+        }
+
+        DIR* dir = opendir(path.c_str());
+        if (!dir)
+        {
+            // Already removed or doesn't exist.
+            return errno == ENOENT;
+        }
+
+        bool ok = true;
+        struct dirent* entry = nullptr;
+        while ((entry = readdir(dir)) != nullptr)
+        {
+            if (std::strcmp(entry->d_name, ".") == 0 || std::strcmp(entry->d_name, "..") == 0)
+            {
+                continue;
+            }
+
+            std::string childPath = path;
+            if (childPath.back() != '/')
+            {
+                childPath.push_back('/');
+            }
+            childPath.append(entry->d_name);
+
+            struct stat st;
+            if (lstat(childPath.c_str(), &st) != 0)
+            {
+                ok = false;
+                continue;
+            }
+
+            if (S_ISDIR(st.st_mode))
+            {
+                if (!removeDirectoryAndroidRecursive(childPath))
+                {
+                    ok = false;
+                }
+            }
+            else if (remove(childPath.c_str()) != 0)
+            {
+                ok = false;
+            }
+        }
+
+        closedir(dir);
+
+        if (rmdir(path.c_str()) != 0 && errno != ENOENT)
+        {
+            ok = false;
+        }
+
+        return ok;
+    }
 #endif
 }
 
@@ -1346,13 +1407,7 @@ bool FileUtils::removeDirectory(const std::string& path)
     else
         return true;
 #else
-    std::string command = "rm -r ";
-    // Path may include space.
-    command += "\"" + path + "\"";
-    if (system(command.c_str()) >= 0)
-        return true;
-    else
-        return false;
+    return removeDirectoryAndroidRecursive(path);
 #endif // (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
 
 #else

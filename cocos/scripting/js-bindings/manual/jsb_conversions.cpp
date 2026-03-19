@@ -3202,6 +3202,64 @@ bool spine_Vector_String_to_seval(const spine::Vector<spine::String>& v, se::Val
     return ok;
 }
 
+#if USE_SPINE4
+bool seval_to_spine4_Vector_String(const se::Value& v, spine4::Vector<spine4::String>* ret)
+{
+    assert(ret != nullptr);
+    assert(v.isObject());
+    se::Object* obj = v.toObject();
+    assert(obj->isArray());
+
+    bool ok = true;
+    uint32_t len = 0;
+    ok = obj->getArrayLength(&len);
+    if (!ok)
+    {
+        ret->clear();
+        return false;
+    }
+
+    se::Value tmp;
+    for (uint32_t i = 0; i < len; ++i)
+    {
+        ok = obj->getArrayElement(i, &tmp);
+        if (!ok || !tmp.isObject())
+        {
+            ret->clear();
+            return false;
+        }
+
+        const char* str = tmp.toString().c_str();
+        ret->add(str);
+    }
+
+    return true;
+}
+
+bool spine4_Vector_String_to_seval(const spine4::Vector<spine4::String>& v, se::Value* ret)
+{
+    assert(ret != nullptr);
+    se::HandleObject obj(se::Object::createArrayObject(v.size()));
+    bool ok = true;
+
+    spine4::Vector<spine4::String> tmpv = v;
+    for (uint32_t i = 0, count = (uint32_t)tmpv.size(); i < count; i++)
+    {
+        if (!obj->setArrayElement(i, se::Value(tmpv[i].buffer())))
+        {
+            ok = false;
+            ret->setUndefined();
+            break;
+        }
+    }
+
+    if (ok)
+    ret->setObject(obj);
+
+    return ok;
+}
+#endif
+
 bool native_int_to_se(int32_t from, se::Value &to, se::Object * /*ctx*/) { // NOLINT(readability-identifier-naming)
     to.setInt32(from);
     return true;

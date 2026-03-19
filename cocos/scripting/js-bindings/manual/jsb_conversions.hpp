@@ -38,6 +38,19 @@
 #include "cocos/editor-support/spine/spine.h"
 #endif
 
+#if USE_SPINE4
+#ifdef RTTI_DECL
+#undef RTTI_DECL
+#endif
+#ifdef RTTI_IMPL_NOPARENT
+#undef RTTI_IMPL_NOPARENT
+#endif
+#ifdef RTTI_IMPL
+#undef RTTI_IMPL
+#endif
+#include "cocos/editor-support/spine4/spine.h"
+#endif
+
 //#include "Box2D/Box2D.h"
 
 #define SE_PRECONDITION2_VOID(condition, ...) \
@@ -399,6 +412,13 @@ bool native_ptr_to_seval(typename std::enable_if<!std::is_base_of<cocos2d::Ref,T
 }
 
 template<typename T>
+bool native_ptr_to_seval(T& v, se::Value* ret, bool* isReturnCachedValue = nullptr)
+{
+    typedef typename std::remove_reference<T>::type ValueType;
+    return native_ptr_to_seval<ValueType>(&v, ret, isReturnCachedValue);
+}
+
+template<typename T>
 bool native_ptr_to_rooted_seval(const typename std::enable_if<!std::is_base_of<cocos2d::Ref,T>::value,T>::type* v, se::Value* ret, bool* isReturnCachedValue = nullptr)
 {
     assert(ret != nullptr);
@@ -723,9 +743,195 @@ bool seval_to_spine_Vector_String(const se::Value& v, spine::Vector<spine::Strin
 bool spine_Vector_String_to_seval(const spine::Vector<spine::String>& v, se::Value* ret);
 #endif
 
+#if USE_SPINE4
+
+inline bool spine4_value_to_seval(const long long& v, se::Value* ret)
+{
+    return longlong_to_seval(v, ret);
+}
+
+inline bool spine4_value_to_seval(const spine4::String& v, se::Value* ret)
+{
+    return std_string_to_seval(v.buffer(), ret);
+}
+
+template<typename T>
+inline bool spine4_value_to_seval(const T& v, se::Value* ret)
+{
+    *ret = se::Value((double)v);
+    return true;
+}
+
+template<typename T>
+bool seval_to_spine4_Vector_T(const se::Value& v, spine4::Vector<T>* ret)
+{
+    assert(ret != nullptr);
+    assert(v.isObject());
+    se::Object* obj = v.toObject();
+    assert(obj->isArray());
+
+    bool ok = true;
+    uint32_t len = 0;
+    ok = obj->getArrayLength(&len);
+    if (!ok)
+    {
+        ret->clear();
+        return false;
+    }
+
+    se::Value tmp;
+    for (uint32_t i = 0; i < len; ++i)
+    {
+        ok = obj->getArrayElement(i, &tmp);
+        if (!ok)
+        {
+            ret->clear();
+            return false;
+        }
+
+        if (tmp.isNumber())
+        {
+            ret->add((T)tmp.toNumber());
+        }
+        else if (tmp.isBoolean())
+        {
+            ret->add((T)(tmp.toBoolean() ? 1 : 0));
+        }
+        else
+        {
+            ret->clear();
+            return false;
+        }
+    }
+
+    return true;
+}
+
+template<typename T>
+bool spine4_Vector_T_to_seval(const spine4::Vector<T>& v, se::Value* ret)
+{
+    assert(ret != nullptr);
+    se::HandleObject obj(se::Object::createArrayObject(v.size()));
+    bool ok = true;
+
+    spine4::Vector<T> tmpv = v;
+    for (uint32_t i = 0, count = (uint32_t)tmpv.size(); i < count; i++)
+    {
+        se::Value value;
+        ok = spine4_value_to_seval(tmpv[i], &value);
+        if (!ok || !obj->setArrayElement(i, value))
+        {
+            ok = false;
+            ret->setUndefined();
+            break;
+        }
+    }
+
+    if (ok)
+    ret->setObject(obj);
+
+    return ok;
+}
+
+template<typename T>
+bool spine4_Vector_T_ptr_to_seval(const spine4::Vector<T*>& v, se::Value* ret)
+{
+    assert(ret != nullptr);
+    se::HandleObject obj(se::Object::createArrayObject(v.size()));
+    bool ok = true;
+
+    spine4::Vector<T*> tmpv = v;
+    for (uint32_t i = 0, count = (uint32_t)tmpv.size(); i < count; i++)
+    {
+        se::Value tmp;
+        ok = native_ptr_to_rooted_seval<T>(tmpv[i], &tmp);
+        if (!ok || !obj->setArrayElement(i, tmp))
+        {
+            ok = false;
+            ret->setUndefined();
+            break;
+        }
+    }
+
+    if (ok) ret->setObject(obj);
+    return ok;
+}
+
+template<typename T>
+bool seval_to_spine4_Vector_T_ptr(const se::Value& v, spine4::Vector<T*>* ret)
+{
+    assert(ret != nullptr);
+    assert(v.isObject());
+    se::Object* obj = v.toObject();
+    assert(obj->isArray());
+
+    bool ok = true;
+    uint32_t len = 0;
+    ok = obj->getArrayLength(&len);
+    if (!ok)
+    {
+        ret->clear();
+        return false;
+    }
+
+    se::Value tmp;
+    for (uint32_t i = 0; i < len; ++i)
+    {
+        ok = obj->getArrayElement(i, &tmp);
+        if (!ok || !tmp.isObject())
+        {
+            ret->clear();
+            return false;
+        }
+
+        T* nativeObj = (T*)tmp.toObject()->getPrivateData();
+        ret->add(nativeObj);
+    }
+
+    return true;
+}
+
+bool seval_to_spine4_Vector_String(const se::Value& v, spine4::Vector<spine4::String>* ret);
+bool spine4_Vector_String_to_seval(const spine4::Vector<spine4::String>& v, se::Value* ret);
+
+template<typename T>
+bool spine_Vector_T_to_seval(const spine4::Vector<T>& v, se::Value* ret)
+{
+    return spine4_Vector_T_to_seval(v, ret);
+}
+
+template<typename T>
+bool Vector_to_seval(const spine4::Vector<T>& v, se::Value* ret)
+{
+    return spine4_Vector_T_to_seval(v, ret);
+}
+
+template<typename T>
+bool Vector_to_seval(const spine4::Vector<T*>& v, se::Value* ret)
+{
+    return spine4_Vector_T_ptr_to_seval(v, ret);
+}
+
+template<typename T>
+bool seval_to_Vector(const se::Value& v, spine4::Vector<T>* ret)
+{
+    return seval_to_spine4_Vector_T(v, ret);
+}
+
+inline bool seval_to_Vector(const se::Value& v, spine4::Vector<spine4::String>* ret)
+{
+    return seval_to_spine4_Vector_String(v, ret);
+}
+
+template<typename T>
+bool seval_to_Vector(const se::Value& v, spine4::Vector<T*>* ret)
+{
+    return seval_to_spine4_Vector_T_ptr(v, ret);
+}
+#endif
+
 //
 //// Box2d
 //bool b2Vec2_to_seval(const b2Vec2& v, se::Value* ret);
 //bool b2Manifold_to_seval(const b2Manifold* v, se::Value* ret);
 //bool b2AABB_to_seval(const b2AABB& v, se::Value* ret);
-

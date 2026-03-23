@@ -33,6 +33,7 @@ cc_set_if_undefined(CC_USE_SOCKET ON)
 cc_set_if_undefined(CC_USE_WEBSOCKET_SERVER OFF)
 cc_set_if_undefined(CC_USE_MIDDLEWARE ON)
 cc_set_if_undefined(CC_USE_SPINE ON)
+cc_set_if_undefined(CC_USE_SPINE4 ON)
 cc_set_if_undefined(CC_USE_DRAGONBONES ON)
 cc_set_if_undefined(CC_USE_PARTICLE ON)
 cc_set_if_undefined(CC_USE_SE_NAPI OFF)
@@ -725,6 +726,91 @@ if(CC_USE_SPINE)
     )
 endif() # CC_USE_SPINE
 
+##### CC_USE_SPINE4
+if(CC_USE_SPINE4)
+    list(APPEND CC_COCOS_SOURCES
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/AttachUtil.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/AttachmentVertices.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonAnimation.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonCache.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonCacheAnimation.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonCacheMgr.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonDataMgr.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/SkeletonRenderer.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/VertexEffectDelegate.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support/spine-cocos2dx.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Animation.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/AnimationState.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/AnimationStateData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Atlas.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/AtlasAttachmentLoader.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Attachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/AttachmentLoader.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/AttachmentTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Bone.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/BoneData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/BoundingBoxAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/ClippingAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/ColorTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/ConstraintData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/CurveTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/DeformTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/DrawOrderTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Event.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/EventData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/EventTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Extension.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/IkConstraint.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/IkConstraintData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/IkConstraintTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/InheritTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Json.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/LinkedMesh.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Log.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/MathUtil.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/MeshAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathConstraint.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathConstraintData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathConstraintMixTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathConstraintPositionTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PathConstraintSpacingTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PhysicsConstraint.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PhysicsConstraintData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PhysicsConstraintTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/PointAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/RTTI.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/RegionAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/RotateTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/ScaleTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Sequence.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SequenceTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/ShearTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Skeleton.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonBinary.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonBounds.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonClipping.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonJson.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SkeletonRenderer.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Skin.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Slot.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SlotData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/SpineObject.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/TextureLoader.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Timeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/TransformConstraint.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/TransformConstraintData.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/TransformConstraintTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/TranslateTimeline.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Triangulator.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/Updatable.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4/VertexAttachment.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/scripting/js-bindings/auto/jsb_cocos2dx_spine4_auto.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/cocos/scripting/js-bindings/manual/jsb_spine4_manual.cpp
+    )
+endif() # CC_USE_SPINE4
+
 ##### CC_USE_DRAGONBONES
 if(CC_USE_DRAGONBONES)
     list(APPEND CC_COCOS_SOURCES
@@ -957,6 +1043,7 @@ function(cc_apply_definations target)
         $<IF:$<BOOL:${CC_USE_WEBSOCKET_SERVER}>,USE_WEBSOCKET_SERVER=1,USE_WEBSOCKET_SERVER=0>
         $<IF:$<BOOL:${CC_USE_MIDDLEWARE}>,USE_MIDDLEWARE=1,USE_MIDDLEWARE=0>
         $<IF:$<BOOL:${CC_USE_SPINE}>,USE_SPINE=1,USE_SPINE=0>
+        $<IF:$<BOOL:${CC_USE_SPINE4}>,USE_SPINE4=1,USE_SPINE4=0>
         $<IF:$<BOOL:${CC_USE_DRAGONBONES}>,USE_DRAGONBONES=1,USE_DRAGONBONES=0>
         $<IF:$<BOOL:${CC_USE_SE_NAPI}>,USE_SE_NAPI=1,USE_SE_NAPI=0>
         $<IF:$<BOOL:${CC_USE_PARTICLE}>,USE_PARTICLE=1,USE_PARTICLE=0>
@@ -974,6 +1061,8 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/base)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine-creator-support)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/editor-support/spine4-creator-support)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/math)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/network)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/cocos/platform)

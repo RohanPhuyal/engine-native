@@ -14346,7 +14346,8 @@ static bool js_cocos2dx_spine4_SkeletonAnimation_setTrackEventListener(se::State
                     CC_UNUSED bool ok = true;
                     se::ValueArray args;
                     args.resize(2);
-                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)larg0, &args[0]);
+                    spine4::TrackEntry* safeEntry = larg0 ? larg0 : arg0;
+                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)safeEntry, &args[0]);
                     ok &= native_ptr_to_rooted_seval<spine4::Event>((spine4::Event*)larg1, &args[1]);
                     se::Value rval;
                     se::Object* thisObj = jsThis.isObject() ? jsThis.toObject() : nullptr;
@@ -14420,7 +14421,8 @@ static bool js_cocos2dx_spine4_SkeletonAnimation_setTrackStartListener(se::State
                     CC_UNUSED bool ok = true;
                     se::ValueArray args;
                     args.resize(1);
-                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)larg0, &args[0]);
+                    spine4::TrackEntry* safeEntry = larg0 ? larg0 : cobj->getCurrent();
+                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)safeEntry, &args[0]);
                     se::Value rval;
                     se::Object* thisObj = jsThis.isObject() ? jsThis.toObject() : nullptr;
                     se::Object* funcObj = jsFunc.toObject();
@@ -14604,7 +14606,8 @@ static bool js_cocos2dx_spine4_SkeletonAnimation_setTrackCompleteListener(se::St
                     CC_UNUSED bool ok = true;
                     se::ValueArray args;
                     args.resize(1);
-                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)larg0, &args[0]);
+                    spine4::TrackEntry* safeEntry = larg0 ? larg0 : arg0;
+                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)safeEntry, &args[0]);
                     se::Value rval;
                     se::Object* thisObj = jsThis.isObject() ? jsThis.toObject() : nullptr;
                     se::Object* funcObj = jsFunc.toObject();
@@ -14737,7 +14740,8 @@ static bool js_cocos2dx_spine4_SkeletonAnimation_setCompleteListener(se::State& 
                     CC_UNUSED bool ok = true;
                     se::ValueArray args;
                     args.resize(1);
-                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)larg0, &args[0]);
+                    spine4::TrackEntry* safeEntry = larg0 ? larg0 : cobj->getCurrent();
+                    ok &= native_ptr_to_rooted_seval<spine4::TrackEntry>((spine4::TrackEntry*)safeEntry, &args[0]);
                     se::Value rval;
                     se::Object* thisObj = jsThis.isObject() ? jsThis.toObject() : nullptr;
                     se::Object* funcObj = jsFunc.toObject();

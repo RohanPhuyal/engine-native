@@ -674,7 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = x86_64;
 				CODE_SIGN_ENTITLEMENTS = mac/Simulator.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../../../../../simulator/mac;
@@ -694,7 +694,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-image_base",
 					100000000,
@@ -704,7 +704,7 @@
 				PRODUCT_NAME = Simulator;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../../../cocos/platform/mac $(SRCROOT)/../../../../../external/mac/include $(SRCROOT)/../../../../../external/mac/include/glfw3 $(SRCROOT)/../../../../../external/mac/include/spidermonkey $(SRCROOT)/../../../../../external/sources $(SRCROOT)/../../../../../external/mac/include/v8";
-				VALID_ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -712,7 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = x86_64;
 				CODE_SIGN_ENTITLEMENTS = mac/Simulator.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../../../../../simulator/mac;
@@ -731,7 +731,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-image_base",
 					100000000,
@@ -741,14 +741,14 @@
 				PRODUCT_NAME = Simulator;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../../../cocos/platform/mac $(SRCROOT)/../../../../../external/mac/include $(SRCROOT)/../../../../../external/mac/include/glfw3 $(SRCROOT)/../../../../../external/mac/include/spidermonkey $(SRCROOT)/../../../../../external/sources $(SRCROOT)/../../../../../external/mac/include/v8";
-				VALID_ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
 		F293B6C215EB7BEA00256477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -766,18 +766,18 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../../ $(SRCROOT)/../../../../../cocos $(SRCROOT)/../../../../../cocos/base $(SRCROOT)/../../../../../cocos/physics $(SRCROOT)/../../../../../cocos/math/kazmath $(SRCROOT)/../../../../../cocos/2d $(SRCROOT)/../../../../../cocos/ui $(SRCROOT)/../../../../../cocos/network $(SRCROOT)/../../../../../cocos/audio/include $(SRCROOT)/../../../../../cocos/editor-support $(SRCROOT)/../../../../../extensions $(SRCROOT)/../../../../../external $(SRCROOT)/../../../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../../../external/lua/luajit/include $(SRCROOT)/../../../../../external/lua/tolua $(SRCROOT)/../../../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../../../../cocos/scripting/js-bindings/auto $(SRCROOT)/../../../../../cocos/scripting/js-bindings/manual $(SRCROOT)/../../../../../external/spidermonkey/include/mac";
-				VALID_ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		F293B6C315EB7BEA00256477 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -793,12 +793,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../../ $(SRCROOT)/../../../../../cocos $(SRCROOT)/../../../../../cocos/base $(SRCROOT)/../../../../../cocos/physics $(SRCROOT)/../../../../../cocos/math/kazmath $(SRCROOT)/../../../../../cocos/2d $(SRCROOT)/../../../../../cocos/ui $(SRCROOT)/../../../../../cocos/network $(SRCROOT)/../../../../../cocos/audio/include $(SRCROOT)/../../../../../cocos/editor-support $(SRCROOT)/../../../../../extensions $(SRCROOT)/../../../../../external $(SRCROOT)/../../../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../../../external/lua/luajit/include $(SRCROOT)/../../../../../external/lua/tolua $(SRCROOT)/../../../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../../../../cocos/scripting/js-bindings/auto $(SRCROOT)/../../../../../cocos/scripting/js-bindings/manual $(SRCROOT)/../../../../../external/spidermonkey/include/mac";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};

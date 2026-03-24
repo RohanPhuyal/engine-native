@@ -15379,10 +15379,12 @@ bool js_register_cocos2dx_spine4_SkeletonAnimation(se::Object* obj)
     cls->defineFunction("setDisposeListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setDisposeListener));
     cls->defineFunction("setTrackInterruptListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setTrackInterruptListener));
     cls->defineFunction("setTrackCompleteListenerNative", _SE(js_cocos2dx_spine4_SkeletonAnimation_setTrackCompleteListener));
+    cls->defineFunction("setTrackCompleteListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setTrackCompleteListener));
     cls->defineFunction("setAnimationStateData", _SE(js_cocos2dx_spine4_SkeletonAnimation_setAnimationStateData));
     cls->defineFunction("setEndListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setEndListener));
     cls->defineFunction("getState", _SE(js_cocos2dx_spine4_SkeletonAnimation_getState));
     cls->defineFunction("setCompleteListenerNative", _SE(js_cocos2dx_spine4_SkeletonAnimation_setCompleteListener));
+    cls->defineFunction("setCompleteListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setCompleteListener));
     cls->defineFunction("setTrackDisposeListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setTrackDisposeListener));
     cls->defineFunction("getCurrent", _SE(js_cocos2dx_spine4_SkeletonAnimation_getCurrent));
     cls->defineFunction("setEventListener", _SE(js_cocos2dx_spine4_SkeletonAnimation_setEventListener));

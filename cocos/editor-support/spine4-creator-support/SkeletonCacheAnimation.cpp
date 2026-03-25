@@ -362,7 +362,7 @@ namespace spine4 {
                         curBlendDst = BlendFactor::ONE_MINUS_SRC_ALPHA;
                         break;
                     case BlendMode_Screen:
-                        curBlendSrc = BlendFactor::ONE;
+                        curBlendSrc = _premultipliedAlpha ? BlendFactor::ONE : BlendFactor::SRC_ALPHA;
                         curBlendDst = BlendFactor::ONE_MINUS_SRC_COLOR;
                         break;
                     default:

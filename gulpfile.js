@@ -26,7 +26,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var gulpSequence = require('gulp-sequence');
 var zip = require('gulp-zip');
 var Ftp = require('ftp');
 var ExecSync = require('child_process').execSync;
@@ -36,19 +35,10 @@ var fs = require('fs-extra');
 
 var program = require('commander');
 program
+    .allowUnknownOption(true)
     .option('-b, --bump [version]', 'bump to a new version, or +1')
     .option('--gitlab', 'use gitlab remote to update all code')
     .parse(process.argv);
-
-gulp.task('make-cocos2d-x', gulpSequence('gen-cocos2d-x', 'upload-cocos2d-x'));
-gulp.task('make-simulator', gulpSequence('gen-simulator', 'sign-simulator', 'update-simulator-config', 'update-simulator-dll', 'archive-simulator', 'upload-simulator'));
-
-if (process.platform === 'darwin') {
-    gulp.task('publish', gulpSequence('update', 'init', 'bump-version', 'make-cocos2d-x', 'make-simulator'));
-}
-else {
-    gulp.task('publish', gulpSequence('update', 'init', 'bump-version', 'make-simulator'));
-}
 
 function execSync(cmd, workPath) {
     var execOptions = {
@@ -259,3 +249,13 @@ gulp.task('bump-version', function (cb) {
 
     cb();
 });
+
+gulp.task('make-cocos2d-x', gulp.series('gen-cocos2d-x', 'upload-cocos2d-x'));
+gulp.task('make-simulator', gulp.series('gen-simulator', 'sign-simulator', 'update-simulator-config', 'update-simulator-dll', 'archive-simulator', 'upload-simulator'));
+
+if (process.platform === 'darwin') {
+    gulp.task('publish', gulp.series('update', 'init', 'bump-version', 'make-cocos2d-x', 'make-simulator'));
+}
+else {
+    gulp.task('publish', gulp.series('update', 'init', 'bump-version', 'make-simulator'));
+}
